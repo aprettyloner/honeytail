@@ -188,7 +188,6 @@ func main() {
 			WriteKey: options.Reqs.WriteKey,
 		}); err != nil {
 			fmt.Fprintln(os.Stderr, "Could not verify Honeycomb write key: ", err)
-			os.Exit(1)
 		}
 	} else {
 		logrus.Debug("skipping Honeycomb write key verification, because --debug_stdout is set...")
